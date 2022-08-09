@@ -1,0 +1,26 @@
+spring:
+  
+  datasources:
+    read:
+      username: postgres
+      url: jdbc:postgresql://localhost:5432/read
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+    write:
+      username: postgres
+      url: jdbc:postgresql://localhost:5432/write
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        temp:
+          use_jdbc_metadata_defaults: false
+    
+    
